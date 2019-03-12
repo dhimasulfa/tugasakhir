@@ -1,0 +1,7 @@
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+Options All -Indexes
+ErrorDocument 404 https://localhost/SIGudang/index.php
+ErrorDocument 500 https://localhost/SIGudang/index.php
