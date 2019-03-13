@@ -25,8 +25,9 @@ class Auth extends CI_Controller
             $this->session->set_flashdata('gagal', 'Username atau Password Salah!');
             $post = $this->input->post();
             // var_dump($post);
-            $wuname = array('tkl_uname' => $post['uname']);
-            $wpass = array('tkl_password' => $post['password']);
+            $wuname = array('tkl_uname' => $post['uname']); 
+            $wpass = array('tkl_password' => md5($post['password'])); 
+
 
             $login = $product->cek_user('tengkulak', $wuname, $wpass);
 

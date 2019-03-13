@@ -33,7 +33,7 @@
             <input type="submit" value="Masuk" class="btn btn-success btn-block">
           </form>
           <div class="text-center">
-            <a class="d-block small mt-3" href="<?php echo site_url('petani/auth/register') ?>">Register an Account</a>
+            <a class="d-block small mt-3" href="<?php echo site_url('tengkulak/auth/register') ?>">Register an Account</a>
             <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
           </div>
         </div>
