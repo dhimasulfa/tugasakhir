@@ -105,7 +105,7 @@ $(document).ready(function() {
 				</a>
 			
 				<div class="widgets-wrap float-right">
-					<a href="<?php echo site_url('tengkulak/auth') ?>" class="widget-header mr-3">
+					<a href="<?php echo site_url('Auth') ?>" class="widget-header mr-3">
 						<div class="icontext">
 							<div class="icon-wrap"><img class="logo" src="<?php echo base_url('asets/images/user.png')?>"></div>
 							<div class="text-wrap">
