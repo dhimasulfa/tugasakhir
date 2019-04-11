@@ -255,4 +255,50 @@ class Product_model extends CI_Model
         }
     }
 
+// ****************************************************SHOPPING CART**************************************
+
+public function get_produk_kategori($kategori)
+	{
+		if($kategori>0)
+			{
+				$this->db->where('categori',$kategori);
+			}
+		$query = $this->db->get('harga');
+		return $query->result_array();
+	}
+	
+	public function get_kategori_all()
+	{
+		$query = $this->db->get('categori');
+		return $query->result_array();
+	}
+	
+	public  function get_produk_id($id)
+	{
+		$this->db->select('harga.*,ctg_nama');
+		$this->db->from('harga');
+		$this->db->join('categori', 'categori=categori.ctg_id','left');
+   		$this->db->where('brg_id',$id);
+        return $this->db->get();
+    }	
+	
+	// public function tambah_pelanggan($data)
+	// {
+	// 	$this->db->insert('tbl_pelanggan', $data);
+	// 	$id = $this->db->insert_id();
+	// 	return (isset($id)) ? $id : FALSE;
+	// }
+	
+	public function tambah_order($data)
+	{
+		$this->db->insert('transaksi', $data);
+		$id = $this->db->insert_id();
+		return (isset($id)) ? $id : FALSE;
+	}
+	
+	public function tambah_detail_order($data)
+	{
+		$this->db->insert('transaksi_detail', $data);
+	}
 }
+?>

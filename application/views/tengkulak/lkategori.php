@@ -35,6 +35,49 @@
 
 	<article class="card-group-item">
 		<header class="card-header">
+			<a class="" aria-expanded="true" href="#" data-toggle="collapse" data-target="#collapse22">
+				<i class="icon-action fa fa-chevron-down"></i>
+				<h6 class="title">Kategori</h6>
+			</a>
+		</header>
+		<div style="" class="filter-content collapse show" id="collapse22">
+			<div class="card-body">			
+				<ul class="list-unstyled list-lg">
+	<li class="nav-item <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>">
+		<li> <a href="<?php echo base_url()?>shopping/tampil_cart" class="list-group-item"><strong><i class="glyphicon glyphicon-shopping-cart"></i> KERANJANG BELANJA</strong></a>
+          <?php 
+		  
+		  	$cart= $this->cart->contents();
+
+// If cart is empty, this will show below message.
+			if(empty($cart)) {
+				?>
+                <a class="list-group-item">Keranjang Belanja Kosong</a>
+                <?php
+			}
+			else
+				{
+					$grand_total = 0;
+					foreach ($cart as $item)
+						{
+							$grand_total+=$item['subtotal'];
+				?>
+                <a class="list-group-item"><?php echo $item['brg_id']; ?> (<?php echo $item['hrg_nilai']; ?> x <?php echo number_format($item['brg_berat'],0,",","."); ?>)=<?php echo number_format($item['hrg_nilai'],0,",","."); ?></a>
+                <?php	
+						}
+				?>
+
+                <?php		
+				}
+ ?></li>
+	</li>
+				</ul>  
+			</div> <!-- card-body.// -->
+		</div> <!-- collapse .// -->
+	</article> <!-- card-group-item.// -->
+
+	<article class="card-group-item">
+		<header class="card-header">
 			<a href="#" data-toggle="collapse" data-target="#collapse44">
 				<i class="icon-action fa fa-chevron-down"></i>
 				<h6 class="title">Kecamatan </h6>

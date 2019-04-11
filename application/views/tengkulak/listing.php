@@ -32,6 +32,26 @@
 		</div> <!-- collapse .// -->
 	</article> <!-- card-group-item.// -->
 
+	<article class="card-group-item">
+		<header class="card-header">
+			<a class="" aria-expanded="true" href="#" data-toggle="collapse" data-target="#collapse22">
+				<i class="icon-action fa fa-chevron-down"></i>
+				<h6 class="title">Kategori</h6>
+			</a>
+		</header>
+		<div style="" class="filter-content collapse show" id="collapse22">
+			<div class="card-body">			
+				<ul class="list-unstyled list-lg">
+				<?php foreach ($kategori as $kt): ?>
+	<li class="nav-item <?php echo $this->uri->segment(2) == '' ? 'active': '' ?>">
+		<li> <a href="<?php echo site_url('tengkulak/listing/kategori/'.$kt->ctg_id) ?>"> <?php echo $kt->ctg_nama ?> </a></li>
+	</li>
+		<?php endforeach; ?>
+				</ul>  
+			</div> <!-- card-body.// -->
+		</div> <!-- collapse .// -->
+	</article> <!-- card-group-item.// -->
+
 <article class="card-group-item">
 		<header class="card-header">
 			<a href="#" data-toggle="collapse" data-target="#collapse44">

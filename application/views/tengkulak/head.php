@@ -105,22 +105,29 @@ $(document).ready(function() {
 				</a>
 			
 				<div class="widgets-wrap float-right">
-					<a href="<?php echo site_url('Auth') ?>" class="widget-header mr-3">
 						<div class="icontext">
 							<div class="icon-wrap"><img class="logo" src="<?php echo base_url('asets/images/user.png')?>"></div>
 							<div class="text-wrap">
-								<small>Sign in | Join</small>
-								<div>My account <i class="fa fa-caret-down"></i> </div>
-							</div>
+							<ul class="navbar-nav ml-auto ml-md-0">
+        	<li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false"> My Acount
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="<?php echo site_url('petani/auth') ?>">Petani</a>
+                <a class="dropdown-item" href="<?php echo site_url('tengkulak/auth') ?>">Tengkulak</a>
+            </div>
+        </li>
+    </ul>
+							</div>									
 						</div>
-					</a>	
 
 						<div class="widgets-wrap float-right">
 				<a href="<?php echo base_url('tengkulak/auth'); ?>" class="widget-header mr-3" data-toggle="modal" data-target="#logoutModal">
 					<div class="icontext">
-						<div class="icon-wrap"><img class="logo" src="<?php echo base_url('asets/images/exit.png')?>"></div>
+						<div class="icon-wrap"><img class="logo" src="<?php echo base_url('asets/images/route.png')?>"></div>
 						<div class="text-wrap">
-							<div>Logout</div>
+							<div>Lokasi</div>
 						</div>
 					</div>
 				</a>
